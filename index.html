@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaskezHub - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-blue': '#001f3f',
+              'primary-blue': '#003366',
+              'accent-yellow': '#ffcc00',
+              'card-hover': '#004488',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+        .nav-link {
+            transition: color 0.3s, transform 0.2s;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+        .nav-link:hover {
+            color: theme('colors.accent-yellow');
+            transform: translateY(-2px);
+        }
+        .hero-title {
+            animation: fadeInDown 1s ease-out;
+        }
+        .hero-subtitle {
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-dark-blue text-white min-h-screen font-sans flex flex-col">
+
+    <header class="bg-primary-blue shadow-xl py-4 px-4 sm:px-8 flex justify-center sticky top-0 z-10 rounded-b-xl">
+        <nav class="flex flex-wrap justify-center space-x-2 md:space-x-8 lg:space-x-10 text-center text-sm sm:text-lg">
+            <a href="index.html" class="nav-link font-bold text-accent-yellow border-b-2 border-accent-yellow">Home</a>
+            <!-- Five core content pages -->
+            <a href="dashboard.html" class="nav-link font-bold hover:text-accent-yellow">Dashboard</a>
+            <a href="project.html" class="nav-link font-bold hover:text-accent-yellow">Projects</a>
+            <a href="portfolio.html" class="nav-link font-bold hover:text-accent-yellow">Portfolios</a>
+            <a href="blog.html" class="nav-link font-bold hover:text-accent-yellow">Blog</a>
+            <a href="about.html" class="nav-link font-bold hover:text-accent-yellow">About</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="max-w-4xl mx-auto text-center py-20">
+            <h1 class="hero-title text-6xl md:text-8xl font-extrabold text-accent-yellow mb-4 leading-tight">
+                BaskezHub
+            </h1>
+            <h2 class="hero-subtitle text-2xl md:text-4xl font-light text-gray-300 mb-8">
+                Your Centralized Hub for Computing Portfolios and Projects
+            </h2>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
+                Explore a collection of academic work, detailed analyses, and innovative projects spanning core computer science disciplines, hardware, and information systems.
+            </p>
+            <a href="portfolio.html" class="inline-block bg-accent-yellow text-primary-blue font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                View All Portfolios
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-primary-blue py-4 mt-auto rounded-t-xl">
+        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+            &copy; 2025 BaskezHub. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
+
+

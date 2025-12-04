@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaskezHub - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-blue': '#001f3f',
+              'primary-blue': '#003366',
+              'accent-yellow': '#ffcc00',
+              'card-hover': '#004488',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+        .nav-link {
+            transition: color 0.3s, transform 0.2s;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+        .nav-link:hover {
+            color: theme('colors.accent-yellow');
+            transform: translateY(-2px);
+        }
+        .dashboard-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            min-height: 250px; /* Ensure cards have a minimum height */
+        }
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3);
+            background-color: theme('colors.card-hover');
+        }
+    </style>
+</head>
+<body class="bg-dark-blue text-white min-h-screen font-sans flex flex-col">
+
+    <header class="bg-primary-blue shadow-xl py-4 px-4 sm:px-8 flex justify-center sticky top-0 z-10 rounded-b-xl">
+        <nav class="flex flex-wrap justify-center space-x-2 md:space-x-8 lg:space-x-10 text-center text-sm sm:text-lg">
+            <a href="index.html" class="nav-link font-bold hover:text-accent-yellow">Home</a>
+            <!-- Highlighted Dashboard link -->
+            <a href="dashboard.html" class="nav-link font-bold text-accent-yellow border-b-2 border-accent-yellow">Dashboard</a>
+            <a href="project.html" class="nav-link font-bold hover:text-accent-yellow">Projects</a>
+            <a href="portfolio.html" class="nav-link font-bold hover:text-accent-yellow">Portfolios</a>
+            <a href="blog.html" class="nav-link font-bold hover:text-accent-yellow">Blog</a>
+            <a href="about.html" class="nav-link font-bold hover:text-accent-yellow">About</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow p-4 md:p-10">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-5xl text-center font-extrabold mb-10 text-accent-yellow">
+                Personal Computing Dashboard
+            </h1>
+            <p class="text-center text-lg mb-12 text-gray-300 max-w-3xl mx-auto">
+                Welcome to your command center. Quickly access key metrics and jump directly to your most important sections.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <!-- Card 1: Portfolios Overview -->
+                <a href="portfolio.html" class="dashboard-card block bg-primary-blue rounded-xl p-6 shadow-2xl border-l-4 border-accent-yellow/70">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-accent-yellow mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        <h2 class="text-2xl font-bold">Portfolios</h2>
+                    </div>
+                    <p class="text-gray-300 mb-4">Review and showcase your completed academic portfolio submissions, categorized by subject and complexity.</p>
+                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+                        <li>6 Portfolios Completed (100%)</li>
+                        <li>Latest: Motherboards (P5)</li>
+                    </ul>
+                    <span class="mt-4 inline-block text-accent-yellow hover:underline">View All &rarr;</span>
+                </a>
+
+                <!-- Card 2: Projects Status -->
+                <a href="project.html" class="dashboard-card block bg-primary-blue rounded-xl p-6 shadow-2xl border-l-4 border-accent-yellow/70">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-accent-yellow mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.375-3.5M10.5 16h3M5.621 10.158a4.5 4.5 0 107.7 2.083M18.379 10.158a4.5 4.5 0 10-7.7-2.083"></path></svg>
+                        <h2 class="text-2xl font-bold">Projects</h2>
+                    </div>
+                    <p class="text-gray-300 mb-4">Track the progress of ongoing development and programming projects.</p>
+                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+                        <li>Active Projects: 2</li>
+                        <li>Next Milestone: UI/UX review (Alpha Project)</li>
+                    </ul>
+                    <span class="mt-4 inline-block text-accent-yellow hover:underline">Go to Projects &rarr;</span>
+                </a>
+
+                <!-- Card 3: Blog Activity -->
+                <a href="blog.html" class="dashboard-card block bg-primary-blue rounded-xl p-6 shadow-2xl border-l-4 border-accent-yellow/70">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-accent-yellow mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.848a2 2 0 012.828 0L19 7m-1.414-9.848l-11.314 11.314M11 5v4a2 2 0 002 2h4"></path></svg>
+                        <h2 class="text-2xl font-bold">Blog Insights</h2>
+                    </div>
+                    <p class="text-gray-300 mb-4">See recent articles and technical insights published on the blog.</p>
+                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+                        <li>Latest Post: Why Binary Matters (3 days ago)</li>
+                        <li>Total Posts: 4</li>
+                    </ul>
+                    <span class="mt-4 inline-block text-accent-yellow hover:underline">Read Blog &rarr;</span>
+                </a>
+
+                <!-- Card 4: Learning Progress -->
+                <div class="dashboard-card bg-primary-blue rounded-xl p-6 shadow-2xl border-l-4 border-accent-yellow/70 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-accent-yellow mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h2 class="text-2xl font-bold">Time Spent</h2>
+                    </div>
+                    <p class="text-gray-300 mb-4">A simple visualization of dedicated study/project time this week.</p>
+                    <!-- Placeholder for a simple progress bar or chart -->
+                    <div class="w-full bg-dark-blue rounded-full h-4 mb-2">
+                        <div class="bg-accent-yellow h-4 rounded-full" style="width: 75%"></div>
+                    </div>
+                    <p class="text-gray-400 text-sm">75% target achieved (15/20 hours)</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary-blue py-4 mt-auto rounded-t-xl">
+        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+            &copy; 2025 BaskezHub. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

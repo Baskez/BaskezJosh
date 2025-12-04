@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaskezHub - Portfolios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-blue': '#001f3f',
+              'primary-blue': '#003366',
+              'accent-yellow': '#ffcc00',
+              'card-hover': '#004488',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+        .nav-link {
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: theme('colors.accent-yellow');
+        }
+        .portfolio-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 204, 0, 0.4);
+            background-color: theme('colors.card-hover');
+        }
+    </style>
+</head>
+<body class="bg-dark-blue text-white min-h-screen font-sans">
+    <header class="bg-primary-blue shadow-lg py-4 px-8 flex justify-center rounded-b-xl sticky top-0 z-10">
+        <nav class="flex space-x-8 md:space-x-12">
+            <a href="index.html" class="nav-link text-lg font-bold hover:text-accent-yellow">Home</a>
+            <a href="portfolio.html" class="nav-link text-lg font-bold hover:text-accent-yellow">Portfolios</a>
+            <a href="about.html" class="nav-link text-lg font-bold hover:text-accent-yellow">About</a>
+        </nav>
+    </header>
+
+    <div class="container mx-auto px-4 py-10 md:py-16">
+        <h1 class="text-4xl md:text-5xl text-center font-extrabold mb-10 text-accent-yellow">
+            Compilation of Portfolios
+        </h1>
+        <p class="text-center text-lg mb-12 text-gray-300">
+            Click any project card below to view the detailed work and analysis.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+            <button onclick="showModal('p1')" class="portfolio-card block bg-primary-blue rounded-xl p-6 shadow-xl border-b-4 border-accent-yellow/70 cursor-pointer">
+                <div class="h-32 bg-gray-700/50 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-12 h-12 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M14 9V6M9 19h12M9 19c0 1.105 0 2-2 2s-2-.895-2-2M18 13v6M12 9v6M6 13v6"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-center text-accent-yellow mb-2">Portfolio #1: CS as a Discipline</h3>
+                <p class="text-sm text-gray-300 text-center">Foundational study of the five computing disciplines and majors.</p>
+            </button>
+
+            <button onclick="showModal('p2')" class="portfolio-card block bg-primary-blue rounded-xl p-6 shadow-xl border-b-4 border-accent-yellow/70 cursor-pointer">
+                <div class="h-32 bg-gray-700/50 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-12 h-12 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-center text-accent-yellow mb-2">Portfolio #2: Information Systems</h3>
+                <p class="text-sm text-gray-300 text-center">Understanding Data, Information, and different Support Systems.</p>
+            </button>
+
+            <button onclick="showModal('p3')" class="portfolio-card block bg-primary-blue rounded-xl p-6 shadow-xl border-b-4 border-accent-yellow/70 cursor-pointer">
+                <div class="h-32 bg-gray-700/50 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-12 h-12 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2v5l-4-4h8"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-center text-accent-yellow mb-2">Portfolio #3: Number Systems</h3>
+                <p class="text-sm text-gray-300 text-center">Exploration of Binary, Decimal, Octal, and Hexadecimal systems.</p>
+            </button>
+
+            <button onclick="showModal('p4')" class="portfolio-card block bg-primary-blue rounded-xl p-6 shadow-xl border-b-4 border-accent-yellow/70 cursor-pointer">
+                <div class="h-32 bg-gray-700/50 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-12 h-12 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V7M9 11l-4-4m4 4l4 4m-4-4l-4 4m4-4l4-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-center text-accent-yellow mb-2">Portfolio #4: H/W & S/W</h3>
+                <p class="text-sm text-gray-300 text-center">Analysis of computer hardware, software, and community impact.</p>
+            </button>
+
+            <button onclick="showModal('p5')" class="portfolio-card block bg-primary-blue rounded-xl p-6 shadow-xl border-b-4 border-accent-yellow/70 cursor-pointer">
+                <div class="h-32 bg-gray-700/50 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-12 h-12 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-center text-accent-yellow mb-2">Portfolio #5: Motherboards</h3>
+                <p class="text-sm text-gray-300 text-center">Comparative study on different motherboard form factors (ATX, ITX, etc.).</p>
+            </button>
+
+            <button onclick="showModal('p6')" class="portfolio-card block bg-primary-blue rounded-xl p-6 shadow-xl border-b-4 border-accent-yellow/70 cursor-pointer">
+                <div class="h-32 bg-gray-700/50 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-12 h-12 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9h-3M8 9l3-3m-3 3l-3 3m6-6h6M8 9h6m-3-3v12m0 0l-3-3m3 3l3-3"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-center text-accent-yellow mb-2">Portfolio #6: Types of Computers</h3>
+                <p class="text-sm text-gray-300 text-center">Classification and comparison of computers (Supercomputer, Microcomputer, etc.).</p>
+            </button>
+        </div>
+    </div>
+
+    <div id="portfolioModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden transition-opacity duration-300 flex items-center justify-center p-4" onclick="closeModal()">
+        <div class="bg-primary-blue rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
+            <div class="p-6 md:p-8">
+                <div class="flex justify-between items-center mb-4 border-b border-accent-yellow/50 pb-3">
+                    <h2 id="modalTitle" class="text-2xl md:text-3xl font-bold text-accent-yellow"></h2>
+                    <button onclick="closeModal()" class="text-gray-300 hover:text-white transition duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <div id="modalContent" class="text-gray-200 space-y-4 text-base leading-relaxed">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const portfolioData = {
+            'p1': {
+                title: 'Portfolio #1: Computer Science as a Discipline',
+                content: `
+                    <p><strong>Core Subject:</strong> The systematic study of algorithmic processes, their theory, analysis, design, implementation, and application.</p>
+                    <p><strong>Key Insight:</strong> Computer Science is much broader than just programming; it's fundamentally about systematic problem-solving using logic, creativity, and technology. The discipline provides the foundations for modern technologies like AI, data science, and the internet.</p>
+                    <p><strong>Personal Reaction:</strong> I realized that understanding foundational concepts like algorithms and computation theories is crucial. The course helped distinguish Computer Science from related fields like Information Technology and Software Engineering, emphasizing its core focus on the theoretical and practical application of computation.</p>
+                `
+            },
+            'p2': {
+                title: 'Portfolio #2: Data, Information, and Support Systems',
+                content: `
+                    <p><strong>Core Subject:</strong> Understanding the difference between raw <strong>Data</strong> and processed, meaningful <strong>Information</strong>, and how <strong>Information Systems</strong> (IS) combine people, processes, software, and hardware to achieve organizational goals.</p>
+                    <p><strong>Key Insight:</strong> Data is raw facts (e.g., numbers, names), while Information is organized data used for decision-making. IS are the backbone of modern operations, utilizing various <strong>Support Systems</strong> (like DSS, MIS, ESS) to help managers, professionals, and executives solve problems and strategize.</p>
+                    <p><strong>Personal Reaction:</strong> This topic highlights that technology's value lies in its ability to organize and interpret information. It underscores how critical it is to correctly interpret the data we encounter daily, as information systems drive efficiency across all industries.</p>
+                `
+            },
+            'p3': {
+                title: 'Portfolio #3: Number Systems',
+                content: `
+                    <p><strong>Core Subject:</strong> Exploring the structured methods of representing numbers: <strong>Decimal (Base 10)</strong>, <strong>Binary (Base 2)</strong>, <strong>Octal (Base 8)</strong>, and <strong>Hexadecimal (Base 16)</strong>. </p>
+                    <p><strong>Key Insight:</strong> Binary is the native language of computers (ON/OFF signals). Hexadecimal is often used in programming for memory addresses and color codes because it is easier to read and convert to binary than other bases. All number systems rely on a base, a set of symbols, and rules for place value.</p>
+                    <p><strong>Personal Reaction:</strong> I gained a deeper appreciation for the mathematical logic underpinning all technology. I realized that a solid understanding of these base systems is fundamental to becoming a better coder and understanding digital electronics and computer architecture.</p>
+                `
+            },
+            'p4': {
+                title: 'Portfolio #4: H/W & S/W',
+                content: `
+                    <p><strong>Core Subject:</strong> Differentiating between <strong>Hardware</strong> (physical components like CPU, RAM, storage) and <strong>Software</strong> (programs and operating systems) and analyzing their roles in various community sectors (schools, hospitals, businesses).</p>
+                    <p><strong>Key Insight:</strong> Hardware provides the foundation, while software enables functionality. Their combined system is essential for productivity and decision-making in modern society. Computers are central to processing information and supporting operations across all institutions.</p>
+                    <p><strong>Personal Reaction:</strong> This study reinforced the idea that technology is ubiquitous and rapidly evolving. Understanding this structure is crucial not just for IT professionals, but for everyone, as technology is a core part of community development and innovation.</p>
+                `
+            },
+            'p5': {
+                title: 'Portfolio #5: Comparative Study on Different Types of Motherboards',
+                content: `
+                    <p><strong>Core Subject:</strong> Comparative analysis of various motherboard <strong>Form Factors</strong> (e.g., ATX, Micro-ATX, Mini-ITX, BTX). </p>
+                    <p><strong>Key Insight:</strong> Motherboards are the main circuit boards connecting all components. Larger factors (like ATX) support more memory and expansion slots for high-performance use (servers/gaming), while smaller factors (like Mini-ITX) prioritize compactness and low power for portable or small systems. Each form factor is suited for a specific computer size and purpose.</p>
+                    <p><strong>Personal Reaction:</strong> By comparing the builds, CPU/memory slots, and chipsets, I learned how to determine the best motherboard for specific computing requirements, appreciating the architectural differences that drive computer performance and size.</p>
+                `
+            },
+            'p6': {
+                title: 'Portfolio #6: Types of Computers',
+                content: `
+                    <p><strong>Core Subject:</strong> Classification of computers based on power, memory, and application: <strong>Supercomputer</strong>, <strong>Mainframe</strong>, <strong>Mini Computer</strong>, <strong>Server</strong>, <strong>Workstation</strong>, and <strong>Microcomputer</strong> (Personal Computer).</p>
+                    <p><strong>Key Insight:</strong> Computers scale dramatically in power and purpose. Supercomputers handle massive data analysis (science), Mainframes manage enterprise-level transactions (banks), Servers manage networks, and Workstations handle high-performance technical tasks (design/engineering). Microcomputers are for everyday personal use.</p>
+                    <p><strong>Personal Reaction:</strong> Understanding these classifications shows how technology scales from personal use to global scientific research, highlighting the tailored nature of computer systems to different workloads and needs.</p>
+                `
+            }
+        };
+
+        const modal = document.getElementById('portfolioModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+
+        /**
+         * Shows the modal with content corresponding to the portfolio ID.
+         * @param {string} id - The ID of the portfolio ('p1', 'p2', etc.).
+         */
+        function showModal(id) {
+            const data = portfolioData[id];
+            if (data) {
+                modalTitle.innerHTML = data.title;
+                modalContent.innerHTML = data.content;
+                modal.classList.remove('hidden');
+                setTimeout(() => modal.style.opacity = '1', 10);
+            }
+        }
+
+        /**
+         * Closes the modal.
+         */
+        function closeModal() {
+            modal.style.opacity = '0';
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+        
+        // Add escape key listener to close modal
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+    </script>
+</body>
+</html>

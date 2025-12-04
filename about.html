@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaskezHub - About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-blue': '#001f3f',
+              'primary-blue': '#003366',
+              'accent-yellow': '#ffcc00',
+              'card-hover': '#004488',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+        .nav-link {
+            transition: color 0.3s, transform 0.2s;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+        .nav-link:hover {
+            color: theme('colors.accent-yellow');
+            transform: translateY(-2px);
+        }
+        .section-separator {
+            height: 2px;
+            width: 50%;
+            margin: 2rem auto;
+        }
+    </style>
+</head>
+<body class="bg-dark-blue text-white min-h-screen font-sans flex flex-col">
+
+    <header class="bg-primary-blue shadow-xl py-4 px-4 sm:px-8 flex justify-center sticky top-0 z-10 rounded-b-xl">
+        <nav class="flex flex-wrap justify-center space-x-2 md:space-x-8 lg:space-x-10 text-center text-sm sm:text-lg">
+            <a href="index.html" class="nav-link font-bold hover:text-accent-yellow">Home</a>
+            <a href="dashboard.html" class="nav-link font-bold hover:text-accent-yellow">Dashboard</a>
+            <a href="project.html" class="nav-link font-bold hover:text-accent-yellow">Projects</a>
+            <a href="portfolio.html" class="nav-link font-bold hover:text-accent-yellow">Portfolios</a>
+            <a href="blog.html" class="nav-link font-bold hover:text-accent-yellow">Blog</a>
+            <!-- Highlighted About link -->
+            <a href="about.html" class="nav-link font-bold text-accent-yellow border-b-2 border-accent-yellow">About</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow p-4 md:p-10">
+        <div class="container mx-auto max-w-4xl bg-primary-blue p-8 md:p-12 rounded-2xl shadow-2xl">
+            <h1 class="text-4xl md:text-5xl text-center font-extrabold mb-4 text-accent-yellow">
+                About BaskezHub
+            </h1>
+            <p class="text-center text-lg mb-10 text-gray-300">
+                A personal hub for academic work, technical projects, and creative expression.
+            </p>
+
+            <!-- Introduction Section -->
+            <section class="mb-10">
+                <h2 class="text-3xl font-bold mb-4 border-b-2 border-accent-yellow/50 pb-2">Introduction</h2>
+                <p class="text-gray-200 leading-relaxed">
+                    Hello! I'm Josh B. Vasquez, the creator of BaskezHub. This space serves as a central showcase for my journey as a student, particularly my studies in the field of Computer Science. Beyond the classroom and code, I am passionate about learning, growing in my faith, and expressing creativity through design and art.
+                </p>
+            </section>
+
+            <div class="section-separator bg-accent-yellow/20"></div>
+
+            <!-- Academic Focus Section -->
+            <section class="mb-10">
+                <h2 class="text-3xl font-bold mb-4 border-b-2 border-accent-yellow/50 pb-2">My Academic Path: Computer Science</h2>
+                <p class="text-gray-200 mb-4 leading-relaxed">
+                    I am currently pursuing a Bachelor of Science in Computer Science (BSCS). While I initially chose the course based on future opportunities, my studies have revealed a deep appreciation for the discipline itself. As I discovered through my portfolio work, Computer Science is not just about programming; it is a systematic approach to problem-solving, leveraging logic, creativity, and technology to improve lives.
+                </p>
+                <p class="text-gray-200 leading-relaxed">
+                    My coursework has provided strong foundations in areas like **Number Systems** (Binary, Hexadecimal), **Information Systems** (Data, Hardware, Software), and the comprehensive **five computing disciplines** (CS, IS, IT, SE, CE), giving me a holistic view of the digital world.
+                </p>
+            </section>
+            
+            <div class="section-separator bg-accent-yellow/20"></div>
+
+            <!-- Interests & Personal Life Section -->
+            <section class="mb-10">
+                <h2 class="text-3xl font-bold mb-4 border-b-2 border-accent-yellow/50 pb-2">Interests & Values</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Faith -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-accent-yellow mb-2">Faith and Growth</h3>
+                        <p class="text-gray-200">
+                            My faith plays a major role in my life. I genuinely love studying the Bible and continuously growing in my knowledge of Jesus Christ, which provides guidance and perspective in all my endeavors.
+                        </p>
+                    </div>
+                    <!-- Creative Pursuits -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-accent-yellow mb-2">Creative Pursuits</h3>
+                        <p class="text-gray-200">
+                            When I step away from academic work, I enjoy engaging in various creative activities. These include playing games, designing projects, and expressing myself through different art forms.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="section-separator bg-accent-yellow/20"></div>
+
+            <!-- Closing -->
+            <section class="text-center">
+                <p class="text-xl font-medium text-gray-100">
+                    Thank you for visiting BaskezHub!
+                </p>
+                <p class="text-sm text-gray-400 mt-2">
+                    I hope you find the content informative and reflective of my ongoing growth in computing.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-primary-blue py-4 mt-auto rounded-t-xl">
+        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+            &copy; 2025 BaskezHub. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

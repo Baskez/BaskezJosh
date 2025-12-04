@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaskezHub - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-blue': '#001f3f',
+              'primary-blue': '#003366',
+              'accent-yellow': '#ffcc00',
+              'card-hover': '#004488',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+        .nav-link {
+            transition: color 0.3s, transform 0.2s;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+        .nav-link:hover {
+            color: theme('colors.accent-yellow');
+            transform: translateY(-2px);
+        }
+        .project-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            min-height: 250px;
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(255, 204, 0, 0.4);
+            background-color: theme('colors.card-hover');
+        }
+    </style>
+</head>
+<body class="bg-dark-blue text-white min-h-screen font-sans flex flex-col">
+
+    <header class="bg-primary-blue shadow-xl py-4 px-4 sm:px-8 flex justify-center sticky top-0 z-10 rounded-b-xl">
+        <nav class="flex flex-wrap justify-center space-x-2 md:space-x-8 lg:space-x-10 text-center text-sm sm:text-lg">
+            <a href="index.html" class="nav-link font-bold hover:text-accent-yellow">Home</a>
+            <a href="dashboard.html" class="nav-link font-bold hover:text-accent-yellow">Dashboard</a>
+            <!-- Highlighted Projects link -->
+            <a href="projects.html" class="nav-link font-bold text-accent-yellow border-b-2 border-accent-yellow">Projects</a>
+            <a href="portfolio.html" class="nav-link font-bold hover:text-accent-yellow">Portfolios</a>
+            <a href="blog.html" class="nav-link font-bold hover:text-accent-yellow">Blog</a>
+            <a href="about.html" class="nav-link font-bold hover:text-accent-yellow">About</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow p-4 md:p-10">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-5xl text-center font-extrabold mb-10 text-accent-yellow">
+                Academic & Technical Projects
+            </h1>
+            <p class="text-center text-lg mb-12 text-gray-300 max-w-3xl mx-auto">
+                Practical applications and demonstrations of core concepts learned in the CIS curriculum, focusing on foundational principles.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <!-- Project Card 1: Number Base Converter (Related to Portfolio #3: Number Systems) -->
+                <div class="project-card bg-primary-blue rounded-xl p-6 shadow-2xl border-t-4 border-accent-yellow/70 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <!-- Icon for conversion/calculator -->
+                            <svg class="w-8 h-8 text-accent-yellow mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path></svg>
+                            <h2 class="text-2xl font-bold">Number Base Converter</h2>
+                        </div>
+                        <p class="text-gray-300 mb-4">A utility that performs real-time conversion between Decimal, Binary, Octal, and Hexadecimal bases, demonstrating the core logic of Portfolio #3.</p>
+                        <div class="text-sm text-gray-400">
+                            <span class="inline-block bg-dark-blue rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">JavaScript</span>
+                            <span class="inline-block bg-dark-blue rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">Number Systems</span>
+                            <span class="inline-block bg-dark-blue rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">Web Interface</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-end space-x-3">
+                        <a href="#" class="text-accent-yellow hover:text-white transition duration-200">View Demo &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Hardware Compatibility Checker (Related to Portfolio #4/5: Hardware) -->
+                <div class="project-card bg-primary-blue rounded-xl p-6 shadow-2xl border-t-4 border-accent-yellow/70 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <!-- Icon for computer components -->
+                            <svg class="w-8 h-8 text-accent-yellow mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5m0 14l3-3m-3 3l-3-3m3-12l3 3m-3-3l-3 3"></path></svg>
+                            <h2 class="text-2xl font-bold">Hardware Compatibility Checker</h2>
+                        </div>
+                        <p class="text-gray-300 mb-4">A simple tool using defined rules to check if a selected CPU is compatible with a Motherboard Form Factor (ATX, Mini-ITX) based on size and socket data.</p>
+                        <div class="text-sm text-gray-400">
+                            <span class="inline-block bg-dark-blue rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">HTML/JS</span>
+                            <span class="inline-block bg-dark-blue rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">Computer Hardware</span>
+                            <span class="inline-block bg-dark-blue rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">Rule-Based Logic</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-end space-x-3">
+                        <a href="#" class="text-accent-yellow hover:text-white transition duration-200">View Logic &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Computing Discipline Suggestor (Related to Portfolio #1: CS Disciplines) -->
+                <div class="project-card bg-primary-blue rounded-xl p-6 shadow-2xl border-t-4 border-accent-yellow/70 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <!-- Icon for thought/decision -->
+                            <svg class="w-8 h-8 text-accent-yellow mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            <h2 class="text-2xl font-bold">Discipline Match Quiz</h2>
+                        </div>
+                        <p class="text-gray-300 mb-4">A simple interactive quiz that asks about user interests (e.g., theory, management, systems, hardware) and suggests the best computing major (CS, IS, SE, CE).</p>
+                        <div class="text-sm text-gray-400">
+                            <span class="inline-block bg-dark-blue rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">HTML/CSS</span>
+                            <span class="inline-block bg-dark-blue rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">Decision Tree</span>
+                            <span class="inline-block bg-dark-blue rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">CS Fundamentals</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-end space-x-3">
+                        <a href="#" class="text-accent-yellow hover:text-white transition duration-200">Try Quiz &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-16 p-6 bg-primary-blue/50 rounded-xl max-w-2xl mx-auto border border-accent-yellow/30">
+                <h3 class="text-xl font-semibold mb-3">Looking for something specific?</h3>
+                <p class="text-gray-300">Detailed source code and documentation for all projects are available upon request.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary-blue py-4 mt-auto rounded-t-xl">
+        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+            &copy; 2025 BaskezHub. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

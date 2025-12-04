@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaskezHub - Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-blue': '#001f3f',
+              'primary-blue': '#003366',
+              'accent-yellow': '#ffcc00',
+              'card-hover': '#004488',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+        .nav-link {
+            transition: color 0.3s, transform 0.2s;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+        .nav-link:hover {
+            color: theme('colors.accent-yellow');
+            transform: translateY(-2px);
+        }
+        .article-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background-color: theme('colors.card-hover');
+        }
+    </style>
+</head>
+<body class="bg-dark-blue text-white min-h-screen font-sans flex flex-col">
+
+    <header class="bg-primary-blue shadow-xl py-4 px-4 sm:px-8 flex justify-center sticky top-0 z-10 rounded-b-xl">
+        <nav class="flex flex-wrap justify-center space-x-2 md:space-x-8 lg:space-x-10 text-center text-sm sm:text-lg">
+            <a href="index.html" class="nav-link font-bold hover:text-accent-yellow">Home</a>
+            <a href="dashboard.html" class="nav-link font-bold hover:text-accent-yellow">Dashboard</a>
+            <a href="project.html" class="nav-link font-bold hover:text-accent-yellow">Projects</a>
+            <a href="portfolio.html" class="nav-link font-bold hover:text-accent-yellow">Portfolios</a>
+            <!-- Highlighted Blog link -->
+            <a href="blog.html" class="nav-link font-bold text-accent-yellow border-b-2 border-accent-yellow">Blog</a>
+            <a href="about.html" class="nav-link font-bold hover:text-accent-yellow">About</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow p-4 md:p-10">
+        <div class="container mx-auto max-w-6xl">
+            <h1 class="text-4xl md:text-5xl text-center font-extrabold mb-4 text-accent-yellow">
+                BaskezHub Blog
+            </h1>
+            <p class="text-center text-xl mb-12 text-gray-300">
+                Insights, reflections, and thoughts on technology, academics, faith, and creativity.
+            </p>
+
+            <!-- Blog Post Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Article 1: Technical (CS Core) -->
+                <div class="article-card bg-primary-blue rounded-xl p-6 shadow-xl border-l-4 border-accent-yellow/70">
+                    <p class="text-xs text-gray-400 mb-2">Technology & Academics | October 28, 2025</p>
+                    <h2 class="text-2xl font-bold text-white mb-3">
+                        Beyond Code: The True Meaning of Computer Science
+                    </h2>
+                    <p class="text-gray-300 mb-4 line-clamp-3">
+                        A reflection on realizing that Computer Science is fundamentally about systematic problem-solving and logic, not just writing software. We explore the five major computing disciplines and how they shape the digital landscape.
+                    </p>
+                    <span class="text-accent-yellow font-semibold text-sm">Read Article &rarr;</span>
+                </div>
+
+                <!-- Article 2: Faith/Personal -->
+                <div class="article-card bg-primary-blue rounded-xl p-6 shadow-xl border-l-4 border-accent-yellow/70">
+                    <p class="text-xs text-gray-400 mb-2">Personal & Faith | November 15, 2025</p>
+                    <h2 class="text-2xl font-bold text-white mb-3">
+                        Finding Structure in Scripture: How Faith Informs Study
+                    </h2>
+                    <p class="text-gray-300 mb-4 line-clamp-3">
+                        Discussing the personal joy of studying the Bible and how the principles of logic, consistency, and structure found in CS actually enrich my understanding of faith and personal growth.
+                    </p>
+                    <span class="text-accent-yellow font-semibold text-sm">Read Article &rarr;</span>
+                </div>
+
+                <!-- Article 3: Hardware/Technical -->
+                <div class="article-card bg-primary-blue rounded-xl p-6 shadow-xl border-l-4 border-accent-yellow/70">
+                    <p class="text-xs text-gray-400 mb-2">Technology & Hardware | November 22, 2025</p>
+                    <h2 class="text-2xl font-bold text-white mb-3">
+                        The Core Components: Why Hardware Still Matters
+                    </h2>
+                    <p class="text-gray-300 mb-4 line-clamp-3">
+                        A look at the foundational role of hardware (CPU, Motherboards, RAM) in modern computing. This article compares different types of computer systems, from Microcomputers to Workstations.
+                    </p>
+                    <span class="text-accent-yellow font-semibold text-sm">Read Article &rarr;</span>
+                </div>
+
+                <!-- Article 4: Design/Creative -->
+                <div class="article-card bg-primary-blue rounded-xl p-6 shadow-xl border-l-4 border-accent-yellow/70">
+                    <p class="text-xs text-gray-400 mb-2">Creativity & Design | December 1, 2025</p>
+                    <h2 class="text-2xl font-bold text-white mb-3">
+                        The Art of Digital Minimalism: Clean Design in Web Projects
+                    </h2>
+                    <p class="text-gray-300 mb-4 line-clamp-3">
+                        Exploring how good design relies on principles of simplicity and clear communication. A brief overview of how I approach visual design in my personal projects and digital artwork.
+                    </p>
+                    <span class="text-accent-yellow font-semibold text-sm">Read Article &rarr;</span>
+                </div>
+                
+                <!-- Article 5: Academic (Number Systems) -->
+                <div class="article-card bg-primary-blue rounded-xl p-6 shadow-xl border-l-4 border-accent-yellow/70">
+                    <p class="text-xs text-gray-400 mb-2">Math & Logic | December 4, 2025</p>
+                    <h2 class="text-2xl font-bold text-white mb-3">
+                        The Hidden Language: Binary, Hexadecimal, and Base Systems
+                    </h2>
+                    <p class="text-gray-300 mb-4 line-clamp-3">
+                        Breaking down the fundamental concept of number systems. Why do computers use Binary, and how do Hexadecimal and Octal make a programmer's life easier? The mathematical core of the digital world.
+                    </p>
+                    <span class="text-accent-yellow font-semibold text-sm">Read Article &rarr;</span>
+                </div>
+
+                <!-- Article 6: Future/Vision -->
+                <div class="article-card bg-primary-blue rounded-xl p-6 shadow-xl border-l-4 border-accent-yellow/70">
+                    <p class="text-xs text-gray-400 mb-2">Future & Vision | December 10, 2025</p>
+                    <h2 class="text-2xl font-bold text-white mb-3">
+                        My Next Steps: Integrating Faith and Future Tech Careers
+                    </h2>
+                    <p class="text-gray-300 mb-4 line-clamp-3">
+                        A personal essay on balancing academic goals with personal values, and how I plan to apply the technical skills from my BSCS degree in a way that aligns with my long-term life vision.
+                    </p>
+                    <span class="text-accent-yellow font-semibold text-sm">Read Article &rarr;</span>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-16 p-6 bg-primary-blue/50 rounded-xl max-w-2xl mx-auto border border-accent-yellow/30">
+                <h3 class="text-xl font-semibold mb-3">More Content Coming Soon!</h3>
+                <p class="text-gray-300">Keep checking back for new articles and reflections on computing and life.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary-blue py-4 mt-auto rounded-t-xl">
+        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+            &copy; 2025 BaskezHub. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
